@@ -1,0 +1,242 @@
+[gd_scene load_steps=9 format=3 uid="uid://cco56v1vohiem"]
+
+[ext_resource type="PackedScene" uid="uid://dghptktio2avd" path="res://crumb.tscn" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://bqvvx2qq02gr5" path="res://task_spawner.gd" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://TeenyTinyPixls-o2zo.ttf" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b1xtckvc0hj5w" path="res://toaster.tscn" id="4_1bvp3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(22.48359, 8.703248)
+
+[sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 3
+background_energy_multiplier = 0.07
+glow_enabled = true
+glow_blend_mode = 0
+fog_enabled = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h2yge"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Toaster" parent="." instance=ExtResource("4_1bvp3")]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(-16, 466)
+collision_layer = 3
+collision_mask = 3
+metadata/_edit_group_ = true
+
+[node name="FirstToast" parent="." instance=ExtResource("1_h2yge")]
+unique_name_in_owner = true
+position = Vector2(-16, 437)
+description = "toast      tasks"
+
+[node name="Label" type="Label" parent="FirstToast"]
+offset_left = 88.0
+offset_top = -42.0
+offset_right = 485.0
+offset_bottom = 59.0
+theme_override_fonts/font = ExtResource("2_h2yge")
+text = "left click  to grab 
+right click to release
+scroll wheel to adjust the size
+or hold space on the toast!!!"
+
+[node name="WorldBox" type="StaticBody2D" parent="."]
+position = Vector2(-6, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBox"]
+position = Vector2(-8, 535)
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldBox"]
+position = Vector2(-931, -46)
+rotation = 1.5734773
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldBox"]
+position = Vector2(953, -10)
+rotation = 4.7028017
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WorldBox"]
+position = Vector2(-624, -308)
+scale = Vector2(3.1326203, 0.17472948)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBox/StaticBody2D"]
+position = Vector2(-24.129791, 229.37036)
+scale = Vector2(5.635753, 4.454939)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="WorldBox/StaticBody2D"]
+offset_left = -87.540634
+offset_top = 209.62637
+offset_right = 38.719894
+offset_bottom = 249.62637
+color = Color(0.3843244, 0.6453516, 0.9599907, 1)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WorldBox"]
+position = Vector2(772, -314)
+scale = Vector2(3.1326203, 0.17472948)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBox/StaticBody2D2"]
+position = Vector2(-24.129791, 229.37036)
+scale = Vector2(5.635753, 4.454939)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="WorldBox/StaticBody2D2"]
+offset_left = -87.540634
+offset_top = 209.62637
+offset_right = 38.719894
+offset_bottom = 249.62637
+color = Color(0.3843244, 0.6453516, 0.9599907, 1)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="WorldBox"]
+position = Vector2(786.00006, 230)
+scale = Vector2(3.1326203, 0.17472948)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBox/StaticBody2D3"]
+position = Vector2(-24.129791, 229.37036)
+scale = Vector2(5.635753, 4.454939)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="WorldBox/StaticBody2D3"]
+offset_left = -87.540634
+offset_top = 209.62637
+offset_right = 38.719894
+offset_bottom = 249.62637
+color = Color(0.3843244, 0.6453516, 0.9599907, 1)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="WorldBox"]
+position = Vector2(-628.99994, 230.00002)
+scale = Vector2(3.1326203, 0.17472948)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBox/StaticBody2D4"]
+position = Vector2(-24.129791, 229.37036)
+scale = Vector2(5.635753, 4.454939)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="WorldBox/StaticBody2D4"]
+offset_left = -87.540634
+offset_top = 209.62637
+offset_right = 38.719894
+offset_bottom = 249.62637
+color = Color(0.3843244, 0.6453516, 0.9599907, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 4)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -7.0
+offset_top = -49.0
+offset_right = 33.0
+offset_bottom = -9.0
+scale = Vector2(709.7949, 424.8892)
+color = Color(0.04091093, 0.06317691, 0.0854386, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = -80.0
+offset_top = -514.0
+offset_right = 57.0
+offset_bottom = -458.0
+scale = Vector2(1.2192519, 1.2192519)
+theme_override_constants/separation = 8
+
+[node name="Spawner" type="LineEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_h2yge")
+placeholder_text = "Add a task"
+expand_to_text_length = true
+script = ExtResource("2_0xm2m")
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_h2yge")
+text = "Priority:"
+horizontal_alignment = 1
+
+[node name="Priority" type="HSlider" parent="."]
+unique_name_in_owner = true
+offset_left = -42.0
+offset_top = -431.0
+offset_right = 48.0
+offset_bottom = -415.0
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0xm2m")
+
+[node name="instructions2" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 121.0
+offset_top = -440.0
+offset_right = 289.0
+offset_bottom = -417.0
+theme_override_fonts/font = ExtResource("2_h2yge")
+text = "<-- adjust the priority!"
+
+[node name="instructions" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 124.0
+offset_top = -507.0
+offset_right = 390.0
+offset_bottom = -484.0
+theme_override_fonts/font = ExtResource("2_h2yge")
+text = "<-- add task here then press enter!"
+
+[node name="Category" type="LineEdit" parent="."]
+texture_filter = 1
+offset_left = -815.0
+offset_top = -269.0
+offset_right = -562.0
+offset_bottom = -249.0
+theme_override_fonts/font = ExtResource("2_h2yge")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h2yge")
+placeholder_text = "organize your tasks!"
+alignment = 1
+
+[node name="Category2" type="LineEdit" parent="."]
+texture_filter = 1
+offset_left = -817.0
+offset_top = 272.0
+offset_right = -564.0
+offset_bottom = 292.0
+theme_override_fonts/font = ExtResource("2_h2yge")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h2yge")
+placeholder_text = "organize your tasks!"
+alignment = 1
+
+[node name="Category3" type="LineEdit" parent="."]
+texture_filter = 1
+offset_left = 572.0
+offset_top = -268.0
+offset_right = 825.0
+offset_bottom = -248.0
+theme_override_fonts/font = ExtResource("2_h2yge")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h2yge")
+placeholder_text = "organize your tasks!"
+alignment = 1
+
+[node name="Category4" type="LineEdit" parent="."]
+texture_filter = 1
+offset_left = 584.0
+offset_top = 274.0
+offset_right = 837.0
+offset_bottom = 294.0
+theme_override_fonts/font = ExtResource("2_h2yge")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h2yge")
+placeholder_text = "organize your tasks!"
+alignment = 1

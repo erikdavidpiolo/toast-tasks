@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1xtckvc0hj5w"]
+
+[ext_resource type="Script" uid="uid://b3rqxeg5x3e8k" path="res://toaster.gd" id="1_g84w6"]
+[ext_resource type="Texture2D" uid="uid://xx8owbpyxq5l" path="res://toaster.png" id="1_wtcfe"]
+[ext_resource type="AudioStream" uid="uid://4rhokht2mmqm" path="res://toaster.wav" id="2_g84w6"]
+[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://TeenyTinyPixls-o2zo.ttf" id="3_ei68m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ei68m"]
+size = Vector2(157, 81)
+
+[node name="Toaster" type="RigidBody2D"]
+script = ExtResource("1_g84w6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 8.5)
+shape = SubResource("RectangleShape2D_ei68m")
+
+[node name="toaster" type="Sprite2D" parent="."]
+modulate = Color(0.7373294, 0.7373294, 0.735357, 1)
+texture_filter = 1
+position = Vector2(13, -14)
+rotation = -3.1415925
+scale = Vector2(7.5958014, 7.5958014)
+texture = ExtResource("1_wtcfe")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_g84w6")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -74.0
+offset_top = -36.0
+offset_right = 70.0
+offset_bottom = -13.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_ei68m")
+theme_override_font_sizes/font_size = 10
+text = "Toast made:"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ToastMade" type="Label" parent="."]
+offset_left = -67.0
+offset_top = -12.0
+offset_right = 68.0
+offset_bottom = 24.0
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("3_ei68m")
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1

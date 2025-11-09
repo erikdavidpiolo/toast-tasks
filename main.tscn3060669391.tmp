@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://cco56v1vohiem"]
+
+[ext_resource type="PackedScene" uid="uid://dghptktio2avd" path="res://crumb.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bqvvx2qq02gr5" path="res://task_spawner.gd" id="2_0xm2m"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Crumb" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(187, -54)
+
+[node name="Crumb2" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(383, -64)
+
+[node name="Crumb3" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(69, -52)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3, 326)
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-577, -1)
+rotation = 1.5734773
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.999939, -322)
+rotation = 3.133482
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(575, -1)
+rotation = 4.7400813
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="Spawner" type="LineEdit" parent="."]
+unique_name_in_owner = true
+offset_left = -43.0
+offset_top = -299.0
+offset_right = 47.0
+offset_bottom = -268.0
+placeholder_text = "Add a task"
+expand_to_text_length = true
+script = ExtResource("2_0xm2m")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://1ughefj06u5t"]
+
+[ext_resource type="AudioStream" uid="uid://ckj6sh4i1jluo" path="res://explosion-8-bit-8-314694.mp3" id="1_q7epf"]
+
+[sub_resource type="Curve" id="Curve_7rj46"]
+_data = [Vector2(0.6848382, 0.9228125), 0.0, 0.0, 0, 0, Vector2(0.9897785, 0.195625), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_q7epf"]
+offsets = PackedFloat32Array(0, 0.56149733, 0.78966135, 0.86452764, 0.9786096)
+colors = PackedColorArray(1.8247963, 0, 0, 1, 1.8247963, 1.0624504, 0, 1, 1.8247963, 1.8247963, 0, 0.69600004, 0.9822071, 0.9607386, 0.86663747, 0.707, 0.06100855, 0.050708726, 0.012920001, 0.91200006)
+
+[node name="Node2D" type="Node2D"]
+z_index = 4
+texture_filter = 1
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+z_index = -1
+position = Vector2(0, 1)
+scale = Vector2(52.187935, 47.26744)
+emitting = false
+amount = 1000
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 0.34
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+spread = 180.0
+initial_velocity_max = 20.0
+scale_amount_min = 5.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_7rj46")
+color_ramp = SubResource("Gradient_q7epf")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_q7epf")
+autoplay = true

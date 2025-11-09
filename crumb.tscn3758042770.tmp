@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=3 uid="uid://dghptktio2avd"]
+
+[ext_resource type="Script" uid="uid://d2ck7wlpdvana" path="res://crumb.gd" id="1_abxse"]
+[ext_resource type="Texture2D" uid="uid://u7mya3tsstmc" path="res://crumb.png" id="2_f74ob"]
+[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://TeenyTinyPixls-o2zo.ttf" id="3_iymin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f74ob"]
+size = Vector2(34.2315, 30.172085)
+
+[sub_resource type="Curve" id="Curve_f74ob"]
+_data = [Vector2(0.6848382, 0.9228125), 0.0, 0.0, 0, 0, Vector2(0.9897785, 0.195625), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_f74ob"]
+offsets = PackedFloat32Array(0, 0.56149733, 0.78966135, 0.86452764, 0.9786096)
+colors = PackedColorArray(1.8247963, 0, 0, 1, 1.8247963, 1.0624504, 0, 1, 1.8247963, 1.8247963, 0, 0.69600004, 0.9822071, 0.9607386, 0.86663747, 0.707, 0.06100855, 0.050708726, 0.012920001, 0.91200006)
+
+[sub_resource type="Animation" id="Animation_f74ob"]
+resource_name = "new_animation"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.3490658503988659, -0.3490658503988659, 0.3490658503988659, -0.3490658503988659, 0.3490658503988659]
+}
+
+[sub_resource type="Animation" id="Animation_iymin"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_au34r"]
+_data = {
+&"RESET": SubResource("Animation_iymin"),
+&"new_animation": SubResource("Animation_f74ob")
+}
+
+[node name="Crumb" type="RigidBody2D"]
+script = ExtResource("1_abxse")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -2)
+scale = Vector2(11.684822, 11.852312)
+texture = ExtResource("2_f74ob")
+region_enabled = true
+region_rect = Rect2(12.103319, 11.688321, 7.9328766, 7.1701)
+
+[node name="Description" type="Label" parent="Sprite2D"]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = -0.20074789
+anchor_top = 0.39589745
+anchor_right = 1.2908084
+anchor_bottom = 1.3119334
+offset_left = -3.8152122
+offset_top = -4.1212296
+offset_right = 33.94032
+offset_bottom = 19.271748
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.21663213, 0.21513847)
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.27058825)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("3_iymin")
+theme_override_font_sizes/font_size = 5
+text = "toast
+tasks"
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0.03635168, -1.0531721)
+scale = Vector2(2.6854596, 2.721269)
+shape = SubResource("RectangleShape2D_f74ob")
+debug_color = Color(1.0588765e-06, 0.4294036, 0.50335795, 0.42)
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+z_index = -1
+position = Vector2(0, 1)
+scale = Vector2(52.187935, 47.26744)
+amount = 60
+lifetime = 2.0
+randomness = 0.1
+lifetime_randomness = 0.34
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+spread = 7.11
+gravity = Vector2(0, -100)
+initial_velocity_min = 0.35
+initial_velocity_max = 0.35
+damping_max = 3.08
+scale_amount_min = 5.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_f74ob")
+color_ramp = SubResource("Gradient_f74ob")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_au34r")
+}
+movie_quit_on_finish = true

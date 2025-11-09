@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dghptktio2avd"]
+
+[ext_resource type="Script" uid="uid://d2ck7wlpdvana" path="res://crumb.gd" id="1_abxse"]
+[ext_resource type="Texture2D" uid="uid://u7mya3tsstmc" path="res://crumb.png" id="2_f74ob"]
+[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://TeenyTinyPixls-o2zo.ttf" id="3_iymin"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_33kay"]
+radius = 18.0
+
+[node name="Crumb" type="RigidBody2D"]
+gravity_scale = 0.1
+script = ExtResource("1_abxse")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 4)
+scale = Vector2(13.745439, 13.745439)
+texture = ExtResource("2_f74ob")
+
+[node name="Description" type="Label" parent="Sprite2D"]
+texture_filter = 1
+offset_left = -8.511915
+offset_top = -3.7103214
+offset_right = 31.488085
+offset_bottom = 19.289679
+scale = Vector2(0.43147692, 0.43147692)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.27058825)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_iymin")
+theme_override_font_sizes/font_size = 5
+text = "TASK"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+scale = Vector2(2.8397424, 2.8397424)
+shape = SubResource("CircleShape2D_33kay")
