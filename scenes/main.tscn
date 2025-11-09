@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cco56v1vohiem"]
 
-[ext_resource type="PackedScene" uid="uid://dghptktio2avd" path="res://crumb.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dghptktio2avd" path="res://scenes/crumb.tscn" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://bqvvx2qq02gr5" path="res://task_spawner.gd" id="2_0xm2m"]
-[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://TeenyTinyPixls-o2zo.ttf" id="2_h2yge"]
+[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://assets/fonts/TeenyTinyPixls-o2zo.ttf" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b1xtckvc0hj5w" path="res://toaster.tscn" id="4_1bvp3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]

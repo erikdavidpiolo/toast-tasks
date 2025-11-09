@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8ufunlatebn7"
-path="res://.godot/imported/hearttask.png-01d463f1bfa11784e2d0af2e1df62353.ctex"
+uid="uid://di7v58u15ttvk"
+path="res://.godot/imported/ash (1).png-daa9832c2427fdb6be43fe43f0e55ebd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hearttask.png"
-dest_files=["res://.godot/imported/hearttask.png-01d463f1bfa11784e2d0af2e1df62353.ctex"]
+source_file="res://assets/sprites/ash (1).png"
+dest_files=["res://.godot/imported/ash (1).png-daa9832c2427fdb6be43fe43f0e55ebd.ctex"]
 
 [params]
 

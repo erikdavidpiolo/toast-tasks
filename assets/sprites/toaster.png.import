@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u7mya3tsstmc"
-path="res://.godot/imported/crumb.png-c3ea523ead5fde74f559f045dd124d8e.ctex"
+uid="uid://xx8owbpyxq5l"
+path="res://.godot/imported/toaster.png-f5a72e7eda5066edb8fc3ef99c2e3861.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://crumb.png"
-dest_files=["res://.godot/imported/crumb.png-c3ea523ead5fde74f559f045dd124d8e.ctex"]
+source_file="res://assets/sprites/toaster.png"
+dest_files=["res://.godot/imported/toaster.png-f5a72e7eda5066edb8fc3ef99c2e3861.ctex"]
 
 [params]
 

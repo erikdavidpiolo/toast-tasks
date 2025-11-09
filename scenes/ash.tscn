@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://brn18jnky8hfv"]
+[gd_scene load_steps=11 format=3 uid="uid://dnkiga4xpukhj"]
 
-[ext_resource type="Script" uid="uid://d2ck7wlpdvana" path="res://crumb.gd" id="1_wnlrp"]
-[ext_resource type="Texture2D" uid="uid://d0domf00hcptb" path="res://mia.png" id="2_wnlrp"]
-[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://TeenyTinyPixls-o2zo.ttf" id="3_ihone"]
-[ext_resource type="Texture2D" uid="uid://bi2jg4ln5xifu" path="res://heartparticle.png" id="4_d1a0j"]
+[ext_resource type="Script" uid="uid://d2ck7wlpdvana" path="res://crumb.gd" id="1_gw3c0"]
+[ext_resource type="Texture2D" uid="uid://di7v58u15ttvk" path="res://assets/sprites/ash (1).png" id="2_h2hlq"]
+[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://assets/fonts/TeenyTinyPixls-o2zo.ttf" id="3_d8eo2"]
+[ext_resource type="Texture2D" uid="uid://bi2jg4ln5xifu" path="res://assets/sprites/heartparticle.png" id="4_a0y08"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f74ob"]
 size = Vector2(34.2315, 30.172085)
@@ -55,15 +55,15 @@ _data = {
 }
 
 [node name="Crumb" type="RigidBody2D"]
-script = ExtResource("1_wnlrp")
+script = ExtResource("1_gw3c0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-5, 3.999999)
-scale = Vector2(0.21609373, 0.21919121)
-texture = ExtResource("2_wnlrp")
+position = Vector2(-5.9999995, -7)
+scale = Vector2(0.43086967, 0.43704575)
+texture = ExtResource("2_h2hlq")
 region_enabled = true
-region_rect = Rect2(-1.3407898, 20.49556, 532.4004, 385.9903)
+region_rect = Rect2(89.43036, 263.63068, 256.5202, 175.4501)
 
 [node name="Description" type="Label" parent="Sprite2D"]
 texture_filter = 1
@@ -72,13 +72,13 @@ anchor_left = -0.20074789
 anchor_top = 0.39589745
 anchor_right = 1.2908084
 anchor_bottom = 1.3119334
-offset_left = 74.40453
-offset_top = -156.98274
-offset_right = 112.160095
-offset_bottom = -133.58975
+offset_left = -3.6376982
+offset_top = -7.1131783
+offset_right = 34.117832
+offset_bottom = 16.279802
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.5888145, 0.58475465)
+scale = Vector2(0.21663213, 0.21513847)
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.27058825)
@@ -87,7 +87,7 @@ theme_override_constants/line_spacing = 1
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 1
-theme_override_fonts/font = ExtResource("3_ihone")
+theme_override_fonts/font = ExtResource("3_d8eo2")
 theme_override_font_sizes/font_size = 5
 text = "i <3 you
 andy!"
@@ -108,7 +108,7 @@ texture_filter = 1
 position = Vector2(-2, -1)
 scale = Vector2(52.187935, 47.26744)
 amount = 1000
-texture = ExtResource("4_d1a0j")
+texture = ExtResource("4_a0y08")
 lifetime = 2.0
 randomness = 0.1
 lifetime_randomness = 0.34

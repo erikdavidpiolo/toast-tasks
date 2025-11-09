@@ -1,9 +1,9 @@
 extends LineEdit
 
-const CRUMB_SCENE = preload("res://crumb.tscn")
-const HEART_SCENE = preload("res://heart.tscn")
-const ASH_SCENE = preload("res://ash.tscn")
-const MIA_SCENE = preload("res://mia.tscn")
+const CRUMB_SCENE = preload("res://scenes/crumb.tscn")
+const HEART_SCENE = preload("res://scenes/heart.tscn")
+const ASH_SCENE = preload("res://scenes/ash.tscn")
+const MIA_SCENE = preload("res://scenes/mia.tscn")
 
 var intensity = 3
 var crumb

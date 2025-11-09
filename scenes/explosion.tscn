@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://1ughefj06u5t"]
 
-[ext_resource type="AudioStream" uid="uid://ckj6sh4i1jluo" path="res://explosion-8-bit-8-314694.mp3" id="1_q7epf"]
+[ext_resource type="AudioStream" uid="uid://ckj6sh4i1jluo" path="res://assets/sound/explosion-8-bit-8-314694.mp3" id="1_q7epf"]
 
 [sub_resource type="Curve" id="Curve_7rj46"]
 _data = [Vector2(0.6848382, 0.9228125), 0.0, 0.0, 0, 0, Vector2(0.9897785, 0.195625), 0.0, 0.0, 0, 0]

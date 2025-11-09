@@ -8,7 +8,7 @@ var priority = 0
 var heart = false
 @export var description = "lorem ipsum"
 
-const HEART_TEXTURE = preload("res://heartparticle.png")
+const HEART_TEXTURE = preload("res://assets/sprites/heartparticle.png")
 
 func _ready():
 	$Sprite2D/Description.text = description
@@ -56,7 +56,7 @@ func _physics_process(delta):
 			
 func explode():
 	
-	var explosion = preload("res://explosion.tscn").instantiate()
+	var explosion = preload("res://scenes/explosion.tscn").instantiate()
 	explosion.get_node("Particles").color_ramp = $Particles.color_ramp
 	
 	get_parent().add_child(explosion)

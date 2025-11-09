@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://chltvy0xptfm1"
-path="res://.godot/imported/TeenyTinyPixls-o2zo.ttf-760a225b5cc6d09db4fee3562a9f0a1c.fontdata"
+path="res://.godot/imported/TeenyTinyPixls-o2zo.ttf-237e2a35666a17a340d5bb89eaa7b8f0.fontdata"
 
 [deps]
 
-source_file="res://TeenyTinyPixls-o2zo.ttf"
-dest_files=["res://.godot/imported/TeenyTinyPixls-o2zo.ttf-760a225b5cc6d09db4fee3562a9f0a1c.fontdata"]
+source_file="res://assets/fonts/TeenyTinyPixls-o2zo.ttf"
+dest_files=["res://.godot/imported/TeenyTinyPixls-o2zo.ttf-237e2a35666a17a340d5bb89eaa7b8f0.fontdata"]
 
 [params]
 

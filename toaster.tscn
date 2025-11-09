@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://b1xtckvc0hj5w"]
 
 [ext_resource type="Script" uid="uid://b3rqxeg5x3e8k" path="res://toaster.gd" id="1_g84w6"]
-[ext_resource type="Texture2D" uid="uid://xx8owbpyxq5l" path="res://toaster.png" id="1_wtcfe"]
-[ext_resource type="AudioStream" uid="uid://4rhokht2mmqm" path="res://toaster.wav" id="2_g84w6"]
-[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://TeenyTinyPixls-o2zo.ttf" id="3_ei68m"]
+[ext_resource type="Texture2D" uid="uid://xx8owbpyxq5l" path="res://assets/sprites/toaster.png" id="1_wtcfe"]
+[ext_resource type="AudioStream" uid="uid://4rhokht2mmqm" path="res://assets/sound/toaster.wav" id="2_g84w6"]
+[ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://assets/fonts/TeenyTinyPixls-o2zo.ttf" id="3_ei68m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ei68m"]
 size = Vector2(157, 81)

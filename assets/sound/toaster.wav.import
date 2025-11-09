@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://4rhokht2mmqm"
-path="res://.godot/imported/toaster.wav-978f535995f7e06a846be5fd2c43bfbe.sample"
+path="res://.godot/imported/toaster.wav-f9ba2ddb6df7f1e9f47796e3e4cb9551.sample"
 
 [deps]
 
-source_file="res://toaster.wav"
-dest_files=["res://.godot/imported/toaster.wav-978f535995f7e06a846be5fd2c43bfbe.sample"]
+source_file="res://assets/sound/toaster.wav"
+dest_files=["res://.godot/imported/toaster.wav-f9ba2ddb6df7f1e9f47796e3e4cb9551.sample"]
 
 [params]
 
