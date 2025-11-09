@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dghptktio2avd"]
 
-[ext_resource type="Script" uid="uid://d2ck7wlpdvana" path="res://crumb.gd" id="1_abxse"]
+[ext_resource type="Script" uid="uid://d2ck7wlpdvana" path="res://scripts/crumb.gd" id="1_abxse"]
 [ext_resource type="Texture2D" uid="uid://mrywckb37wo3" path="res://assets/sprites/toast.png" id="2_f74ob"]
 [ext_resource type="FontFile" uid="uid://chltvy0xptfm1" path="res://assets/fonts/TeenyTinyPixls-o2zo.ttf" id="3_iymin"]
 
